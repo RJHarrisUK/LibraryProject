@@ -6,12 +6,14 @@ public abstract class Item {
 	private int id;
 	private String name;
 	private String publisher;
+	private boolean checkedOut;
 
 	// constructor
-	public Item(int id, String name, String publisher) {
+	public Item(int id, String name, String publisher, boolean checkedOut) {
 		this.id = id;
 		this.name = name;
 		this.publisher = publisher;
+		this.checkedOut = checkedOut;
 	}
 	// behaviours
 
@@ -39,5 +41,17 @@ public abstract class Item {
 
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
+	}
+
+	public boolean isCheckedOut() {
+		return checkedOut;
+	}
+
+	public void setCheckedOut(boolean checkedOut) {
+		this.checkedOut = checkedOut;
+	}
+
+	public boolean getCheckedkOut() {
+		return checkedOut;
 	}
 }

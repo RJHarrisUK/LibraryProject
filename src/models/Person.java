@@ -1,6 +1,13 @@
 package models;
 
-public class Person {
+import java.io.IOException;
+import java.nio.CharBuffer;
+
+import interfaces.Creatable;
+import interfaces.Deletable;
+import interfaces.Updatable;
+
+public class Person implements Creatable, Readable, Updatable, Deletable {
 
 	// attributes
 	private String name;
@@ -39,6 +46,30 @@ public class Person {
 
 	public void setLibraryMember(boolean libraryMember) {
 		this.libraryMember = libraryMember;
+	}
+
+	@Override
+	public void Delete() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void Update() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int read(CharBuffer cb) throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void Create() {
+		// TODO Auto-generated method stub
+
 	}
 
 }
